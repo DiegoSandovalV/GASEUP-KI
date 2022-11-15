@@ -58,7 +58,9 @@ body{
 .leftSide{
     width: 60%;
     height: 100%;
-    background-color: rgba(0, 255, 255, 0.163);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rightSide{
@@ -66,6 +68,8 @@ body{
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 0;
     
 }
 
@@ -80,5 +84,19 @@ body{
 }
 
 
+
+}
+
+@media(max-width: 768px) {
+
+    body{
+        margin: 0px;
+    }
+
+    .container{
+        width: 100vw;
+        height: 100vh;
+        background: rgb(239, 231, 231);
+    }
 
 }

@@ -57,15 +57,15 @@ void loop(){
 
   unsigned long milisegundos = millis();
 
-  // if (milisegundos - milisegundosActuales > interval){
-  //   milisegundosActuales = milisegundos;
-  //   String path;
+  if (milisegundos - milisegundosActuales > interval){
+    milisegundosActuales = milisegundos;
+    String path;
 
-  //   path = "http://amorcito.mx/Data.php?temperatura=" + String(temp) +  "&humedad=" + String(hum);
-  //   Serial.print(path);
-  //   enviarDatos(path);
-  // }
-  Serial.println(hum);
+    path = "http://amorcito.mx/Data.php?temperatura=" + String(temp) +  "&humedad=" + String(hum); //Direccion a la que se mandan los datos
+    Serial.print(path);
+    enviarDatos(path);
+ }
+  
   
 
   if(hum < 65 && status == false){
